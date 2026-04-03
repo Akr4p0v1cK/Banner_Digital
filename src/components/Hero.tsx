@@ -13,9 +13,9 @@ export default function Hero() {
           <h4 className="text-white font-bold tracking-[0.2em] uppercase text-sm mb-2">Hello</h4>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-            i&apos;m Jane Cooper a <br />
+            Oi, eu sou <br />
             <span className="text-brand-dark inline-block mt-2 relative">
-              Freelancer.
+              Seu Nome.
               <span className="absolute -right-6 top-1/2 -translate-y-1/2 w-1 h-12 bg-zinc-500"></span>
             </span>
           </h1>

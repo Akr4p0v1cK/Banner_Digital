@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jane Cooper - Portfolio",
+  title: "Banner Digital - Portfolio",
   description: "Web Designer & UI/UX Expert",
 };
 
