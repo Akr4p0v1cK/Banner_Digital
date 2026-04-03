@@ -1,0 +1,46 @@
+import Link from 'next/link';
+import { Instagram, Linkedin, Twitter, Facebook, Menu, Hexagon } from 'lucide-react';
+
+export default function Navbar() {
+  return (
+    <header className="fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-black/90 backdrop-blur-md border-b border-white/10">
+      {/* Logo */}
+      <div className="flex items-center gap-2">
+        <Hexagon className="w-8 h-8 text-brand-dark" fill="currentColor" />
+        <span className="text-2xl font-bold text-white tracking-wide">Reeni</span>
+      </div>
+
+      {/* Nav Links */}
+      <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/90">
+        <Link href="#" className="hover:text-brand transition-colors">Home</Link>
+        <Link href="#" className="hover:text-brand transition-colors">About</Link>
+        <Link href="#" className="hover:text-brand transition-colors flex items-center gap-1">Services <span className="text-xs">▼</span></Link>
+        <Link href="#" className="hover:text-brand transition-colors flex items-center gap-1">Blog <span className="text-xs">▼</span></Link>
+        <Link href="#" className="hover:text-brand transition-colors flex items-center gap-1">Project <span className="text-xs">▼</span></Link>
+        <Link href="#" className="hover:text-brand transition-colors">Contact</Link>
+      </nav>
+
+      {/* Social & Menu Button */}
+      <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
+          <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white/70 hover:bg-brand-dark hover:text-white transition-all">
+            <Instagram className="w-4 h-4" />
+          </a>
+          <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white/70 hover:bg-brand-dark hover:text-white transition-all">
+            <Linkedin className="w-4 h-4" />
+          </a>
+          <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white/70 hover:bg-brand-dark hover:text-white transition-all">
+            <Twitter className="w-4 h-4" />
+          </a>
+          <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white/70 hover:bg-brand-dark hover:text-white transition-all">
+            <Facebook className="w-4 h-4" />
+          </a>
+        </div>
+        
+        <button className="w-12 h-12 rounded-full bg-brand-dark flex items-center justify-center text-white shadow-[0_0_15px_rgba(88,15,28,0.5)] hover:bg-brand hover:text-black transition-all">
+          <Menu className="w-6 h-6" />
+        </button>
+      </div>
+    </header>
+  );
+}
