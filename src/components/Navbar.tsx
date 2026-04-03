@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Instagram, Linkedin, Twitter, Facebook, Menu, Hexagon } from 'lucide-react';
+import { Menu, Hexagon } from 'lucide-react';
+import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
 
 export default function Navbar() {
   return (
@@ -24,16 +25,16 @@ export default function Navbar() {
       <div className="flex items-center gap-4">
         <div className="hidden md:flex items-center gap-3">
           <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white/70 hover:bg-brand-dark hover:text-white transition-all">
-            <Instagram className="w-4 h-4" />
+            <FaInstagram className="w-4 h-4" />
           </a>
           <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white/70 hover:bg-brand-dark hover:text-white transition-all">
-            <Linkedin className="w-4 h-4" />
+            <FaLinkedin className="w-4 h-4" />
           </a>
           <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white/70 hover:bg-brand-dark hover:text-white transition-all">
-            <Twitter className="w-4 h-4" />
+            <FaTwitter className="w-4 h-4" />
           </a>
           <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white/70 hover:bg-brand-dark hover:text-white transition-all">
-            <Facebook className="w-4 h-4" />
+            <FaFacebook className="w-4 h-4" />
           </a>
         </div>
         
