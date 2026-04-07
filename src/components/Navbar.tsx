@@ -8,12 +8,12 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-black/90 backdrop-blur-md border-b border-white/10">
       {/* Logo */}
       <Link href="/" className="flex items-center">
-        <div className="relative w-[140px] h-[50px]">
+        <div className="relative w-[180px] h-[70px]">
           <Image 
             src="/images/logo.png" 
             alt="Aethel Logo" 
             fill 
-            className="object-contain" 
+            className="object-contain scale-[1.3] origin-left" 
             priority
           />
         </div>
