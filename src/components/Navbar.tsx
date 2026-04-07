@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, Hexagon } from 'lucide-react';
 import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
 
@@ -6,10 +7,17 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-black/90 backdrop-blur-md border-b border-white/10">
       {/* Logo */}
-      <div className="flex items-center gap-2">
-        <Hexagon className="w-8 h-8 text-brand-dark" fill="currentColor" />
-        <span className="text-2xl font-bold text-white tracking-wide">Reeni</span>
-      </div>
+      <Link href="/" className="flex items-center">
+        <div className="relative w-[140px] h-[50px]">
+          <Image 
+            src="/images/logo_aethel.jpg" 
+            alt="Aethel Logo" 
+            fill 
+            className="object-contain" 
+            priority
+          />
+        </div>
+      </Link>
 
       {/* Nav Links */}
       <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/90">
