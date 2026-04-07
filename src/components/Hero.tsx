@@ -13,19 +13,19 @@ export default function Hero() {
           <h4 className="text-white font-bold tracking-[0.2em] uppercase text-sm mb-2">Hello</h4>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-            Oi, eu sou <br />
+            Nós somos a <br />
             <span className="text-brand-dark inline-block mt-2 relative">
-              Seu Nome.
+              Banner Digital.
               <span className="absolute -right-6 top-1/2 -translate-y-1/2 w-1 h-12 bg-zinc-500"></span>
             </span>
           </h1>
           
           <p className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mt-4">
-            A personal portfolio is a collection of your work, achievements, and skills that highlights your abilities and professional growth. It serves as
+            Criamos experiências digitais imersivas que unem estética brutalista e sofisticação. Design ousado e focado em performance para marcas que desejam liderar o mercado.
           </p>
 
           <button className="mt-6 px-8 py-4 bg-brand-dark hover:bg-brand text-white hover:text-black font-semibold rounded-full flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(88,15,28,0.4)]">
-            View Portfolio <span>→</span>
+            Ver Projetos <span>→</span>
           </button>
         </div>
 
@@ -40,11 +40,16 @@ export default function Hero() {
           </div>
 
           {/* Portrait Image (Middle) */}
-          <div className="relative z-10 w-full max-w-[500px] h-full flex items-end justify-center">
-            {/* Placeholder - you can replace with the real image from public folder */}
+          <div className="relative z-10 w-full max-w-[500px] h-full flex items-end justify-center pointer-events-none">
             <div className="w-[80%] h-[80%] bg-zinc-800 rounded-t-full relative overflow-hidden border-b-0 border border-zinc-700 shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
-              {/* Here will go the <Image /> tag later */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-10"></div>
+              <Image 
+                src="/images/hero.png" 
+                alt="Banner Digital Portrait" 
+                fill 
+                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700 opacity-90" 
+                priority
+              />
             </div>
           </div>
 

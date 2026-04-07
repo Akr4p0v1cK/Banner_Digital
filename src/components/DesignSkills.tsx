@@ -1,10 +1,15 @@
-
 export default function DesignSkills() {
-  const skills = [
-    { label: "PHOTOSHOT", value: 90 },
-    { label: "FIGMA", value: 85 },
-    { label: "ADOBE XD", value: 75 },
-    { label: "ADOBE ILLUSTRATOR", value: 80 },
+  const designSkills = [
+    { label: "FIGMA & UI/UX", value: 95 },
+    { label: "MOTION DESIGN", value: 85 },
+    { label: "ADOBE CREATIVE SUITE", value: 90 },
+    { label: "BRANDING", value: 80 },
+  ];
+  const devSkills = [
+    { label: "NEXT.JS & REACT", value: 95 },
+    { label: "TAILWIND CSS", value: 95 },
+    { label: "TYPESCRIPT", value: 88 },
+    { label: "BACKEND & APIS", value: 80 },
   ];
 
   return (
@@ -13,9 +18,9 @@ export default function DesignSkills() {
         
         {/* Left Column: Design Skill */}
         <div className="flex flex-col gap-10">
-          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Design Skill</h2>
+          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Design</h2>
           <div className="flex flex-col gap-8">
-            {skills.map((skill, index) => (
+            {designSkills.map((skill, index) => (
               <div key={index} className="flex flex-col gap-3 group">
                 <span className="text-sm font-semibold tracking-wider text-zinc-300">{skill.label}</span>
                 <div className="w-full h-2 bg-zinc-900 rounded-full relative overflow-visible">
@@ -33,15 +38,15 @@ export default function DesignSkills() {
 
         {/* Right Column: Development Skill */}
         <div className="flex flex-col gap-10">
-          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Development Skill</h2>
+          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Engenharia</h2>
           <div className="flex flex-col gap-8">
-            {skills.map((skill, index) => (
+            {devSkills.map((skill, index) => (
               <div key={`dev-${index}`} className="flex flex-col gap-3 group">
                 <span className="text-sm font-semibold tracking-wider text-zinc-300">{skill.label}</span>
                 <div className="w-full h-2 bg-zinc-900 rounded-full relative overflow-visible">
                   <div 
                     className="absolute top-0 left-0 h-full bg-brand-dark rounded-full transition-all duration-1000 group-hover:shadow-[0_0_15px_rgba(88,15,28,0.4)]"
-                    style={{ width: `${skill.value - 10}%` }}
+                    style={{ width: `${skill.value}%` }}
                   >
                     <div className="absolute -right-3 -top-2 w-6 h-6 bg-brand border-2 border-brand-dark rounded-full shadow-lg"></div>
                   </div>

@@ -1,18 +1,19 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 export default function PortfolioGallery() {
   const projects = [
-    { title: "Digital Transformation Advisors", category: "Development Coaches" },
-    { title: "Dynamic App Development", category: "App Development" },
-    { title: "Immersive Web Experience", category: "Web Design" },
-    { title: "Strategic Brand Identity", category: "Art Direction" }
+    { title: "E-commerce Premium", category: "Varejo & Luxo", image: "/images/portfolio_1.png" },
+    { title: "Plataforma de Investimentos", category: "Fintech", image: "/images/portfolio_2.png" },
+    { title: "Aplicativo de Concierge", category: "Mobile App", image: "/images/portfolio_3.png" },
+    { title: "Rebranding Corporativo", category: "Identidade Visual", image: "/images/portfolio_4.png" }
   ];
 
   return (
     <section className="w-full py-24 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-16 text-center">
-          A Showcase of <span className="text-brand">My Projects</span>
+          Nossos <span className="text-brand">Projetos</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -20,8 +21,13 @@ export default function PortfolioGallery() {
             <div key={idx} className="group relative block overflow-hidden rounded-2xl bg-zinc-900 border border-white/5 cursor-pointer">
               {/* Image Container */}
               <div className="w-full h-[400px] overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/20 to-transparent z-10"></div>
-                <div className="w-full h-full bg-zinc-800 transition-transform duration-700 group-hover:scale-110"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/50 via-transparent to-brand-dark/20 z-10 pointer-events-none"></div>
+                <Image 
+                  src={proj.image}
+                  alt={proj.title}
+                  fill
+                  className="object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                />
                 
                 {/* Arrow Icon that animated on hover */}
                 <div className="absolute top-6 right-6 z-20 w-12 h-12 rounded-full bg-brand flex items-center justify-center text-black opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 shadow-[0_0_20px_rgba(212,175,55,0.6)] transition-all duration-500">
@@ -45,9 +51,9 @@ export default function PortfolioGallery() {
         {/* Small tags below portfolio */}
         <div className="mt-20 flex flex-wrap gap-8 justify-center">
           {[
-            { label: "Ui/visual Design", done: "21 Done" },
-            { label: "Motion Design", done: "20 Done" },
-            { label: "Brand Identity", done: "15 Done" },
+            { label: "UI/UX Design", done: "250+ Projetos" },
+            { label: "Desenvolvimento", done: "180+ Entregas" },
+            { label: "Identidade Visual", done: "120+ Marcas" },
           ].map((tag, i) => (
             <div key={i} className="flex flex-col items-center p-6 bg-black border border-white/10 rounded-xl min-w-[200px] hover:border-brand-dark transition-colors group">
               <h4 className="text-xl font-bold text-white group-hover:text-brand-dark transition-colors">{tag.label}</h4>

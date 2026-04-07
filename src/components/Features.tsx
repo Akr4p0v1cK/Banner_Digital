@@ -1,20 +1,21 @@
+import Image from "next/image";
 
 export default function Features() {
   const features = [
     {
       num: "01.",
-      title: "A Portfolio of Creativity",
-      desc: "Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency"
+      title: "Estética Inconfundível",
+      desc: "Unimos a força do brutalismo à elegância do luxo para criar interfaces que quebram o padrão e geram impacto visual imediato."
     },
     {
       num: "02.",
-      title: "My Portfolio of Innovation",
-      desc: "My work is driven by the belief that thoughtful design and strategic planning can empower brands, transform businesses"
+      title: "Experiências Imersivas",
+      desc: "Foco absoluto na jornada do usuário. Aliamos layouts dinâmicos e microinterações para prender a atenção desde o primeiro segundo."
     },
     {
       num: "03.",
-      title: "A Showcase of My Projects",
-      desc: "In this portfolio, you’ll find a curated selection of projects that highlight my skills in responsive web design"
+      title: "Alta Engenharia",
+      desc: "Desenvolvimento hiper-otimizado com as stacks mais avançadas, garantindo velocidade extrema, SEO aprimorado e segurança máxima."
     }
   ];
 
@@ -25,14 +26,19 @@ export default function Features() {
         {/* Left Side: Image and Heading */}
         <div className="w-full lg:w-1/2 flex flex-col gap-6">
           <div className="w-full h-[400px] bg-zinc-900 rounded-2xl overflow-hidden relative border border-white/5 shadow-2xl">
-            {/* Image Placeholder */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-brand-dark/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-brand-dark/40 to-transparent z-20 pointer-events-none mix-blend-overlay"></div>
+            <Image 
+              src="/images/features.png" 
+              alt="Estética Digital" 
+              fill 
+              className="object-cover opacity-90 grayscale hover:grayscale-0 transition-all duration-700"
+            />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight mt-6 text-white text-balance">
-            Inspiring The World <span className="text-brand">One Project</span>
+            Redefinindo o <span className="text-brand">Padrão Digital</span>
           </h2>
           <p className="text-zinc-400 text-lg">
-            Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational
+            Abandonamos templates genéricos. Cada projeto é uma peça de arte funcional construída sob medida para transmitir exclusividade, autoridade e converter visitantes em clientes fiéis.
           </p>
         </div>
 

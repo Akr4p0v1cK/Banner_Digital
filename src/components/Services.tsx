@@ -4,22 +4,22 @@ export default function Services() {
   const services = [
     {
       title: "Web Design",
-      projects: "120 Projects",
+      projects: "Layouts Exclusivos",
       icon: PenTool,
     },
     {
-      title: "Ui/Ux Design",
-      projects: "241 Projects",
+      title: "Engenharia UI/UX",
+      projects: "Foco em Conversão",
       icon: Layout,
     },
     {
-      title: "Web Research",
-      projects: "240 Projects",
+      title: "Análise de Marca",
+      projects: "Estratégia Posicionamento",
       icon: Search,
     },
     {
-      title: "Marketing",
-      projects: "331 Project",
+      title: "Growth Marketing",
+      projects: "Escala e Resultados",
       icon: Mail,
     }
   ];

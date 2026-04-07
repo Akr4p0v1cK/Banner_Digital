@@ -2,19 +2,19 @@
 export default function BlogAndCTA() {
   const posts = [
     {
-      author: "Mesbah",
-      date: "April 10",
-      title: "Inspiring the World, One Project at a Time for the man"
+      author: "Banner Digital",
+      date: "04 Abr",
+      title: "O poder do Brutalismo: Como o design ousado aumenta a percepção de valor e conversões."
     },
     {
-      author: "Mesbah",
-      date: "April 12",
-      title: "Let's bring your ideas to life! Contact me, and let's"
+      author: "Banner Digital",
+      date: "12 Mar",
+      title: "Web Core Vitals 2026: Por que seu site premium não pode demorar mais de 1 segundo para carregar."
     },
     {
-      author: "Mesbah",
-      date: "April 15",
-      title: "Each one showcases our approach and dedication man"
+      author: "Banner Digital",
+      date: "25 Fev",
+      title: "Psicologia das Cores: A força do preto, vinho e dourado na construção de marcas fortes."
     }
   ];
 
@@ -28,14 +28,14 @@ export default function BlogAndCTA() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-dark/20 blur-[100px] rounded-full pointer-events-none"></div>
           
           <h2 className="text-5xl md:text-7xl font-black text-white relative z-10 max-w-4xl tracking-tight leading-tight">
-            Elevate your brand <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-dark">with Me</span>
+            Eleve sua marca para <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-dark">o próximo nível</span>
           </h2>
           <p className="text-zinc-400 text-lg md:text-xl max-w-2xl relative z-10">
-            A personal portfolio is a collection of your work, achievements, and skills that highlights your abilities and professional growth.
+            Chega de design genérico. Construa uma presença digital imponente, de alto impacto visual e focada 100% em escalar o negócio da sua empresa.
           </p>
           <a href="#" className="relative z-10 inline-block px-10 py-5 bg-brand text-black font-bold text-lg uppercase tracking-wider rounded-full hover:bg-brand-dark transition-colors mt-4">
-            Start a Project
+            Iniciar Projeto
           </a>
         </div>
       </div>
@@ -43,7 +43,7 @@ export default function BlogAndCTA() {
       {/* Blog Section */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center max-w-3xl mx-auto">
-          Elevating Personal Branding through <span className="text-brand">Powerful Portfolios</span>
+          Insights sobre <span className="text-brand">Design e Tecnologia</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -60,7 +60,7 @@ export default function BlogAndCTA() {
                 </h3>
               </div>
               <a href="#" className="text-zinc-400 font-semibold hover:text-white uppercase tracking-wider text-sm flex items-center gap-2">
-                Read More &rarr;
+                Ler Artigo &rarr;
               </a>
             </div>
           ))}
