@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MonitorSmartphone, PenTool, LayoutTemplate, Globe, CircleDollarSign, LayoutGrid } from "lucide-react";
 
 export default function PortfolioGallery() {
   const projects = [
@@ -7,6 +7,39 @@ export default function PortfolioGallery() {
     { title: "Plataforma SaaS de Alta Performance", category: "SaaS", image: "/images/portfolio_2.png" },
     { title: "Landing Page de Lançamento Viral", category: "Landing Page", image: "/images/portfolio_3.png" },
     { title: "Portal Institucional Corporativo", category: "Institucional", image: "/images/portfolio_4.png" }
+  ];
+
+  const servicesList = [
+    {
+      title: "Landing Pages",
+      description: "São páginas focadas em conversão, projetadas para capturar leads, aumentar vendas ou direcionar ações. Criamos Landing Pages personalizadas que combinam design e estratégia para gerar resultados.",
+      icon: MonitorSmartphone,
+    },
+    {
+      title: "Design Exclusivo",
+      description: "Oferecemos sites com design exclusivo, combinando estética e funcionalidade para destacar a singularidade do seu negócio, desenvolvida sob medida para suas necessidades.",
+      icon: PenTool,
+    },
+    {
+      title: "Sites Institucionais",
+      description: "Sites Institucionais são o cartão de visita digital da sua empresa, apresentando sua marca e serviços de forma profissional. Criamos sites que reforçam a credibilidade do seu negócio.",
+      icon: LayoutTemplate,
+    },
+    {
+      title: "Aplicações Web",
+      description: "São sistemas interativos acessíveis via navegador. Desenvolvemos soluções personalizadas, focadas em desempenho e usabilidade para empresas que buscam eficiência e serviços online robustos.",
+      icon: Globe,
+    },
+    {
+      title: "E-Commerce",
+      description: "É ideal para vender produtos virtuais como eBooks e cursos online. Criamos lojas virtuais personalizadas para ampliar o alcance e otimizar a venda de seus conteúdos digitais.",
+      icon: CircleDollarSign,
+    },
+    {
+      title: "CRM's",
+      description: "São painéis interativos que transformam dados em informações visuais. Criamos CRM's personalizados para facilitar o monitoramento e a tomada de decisões.",
+      icon: LayoutGrid,
+    }
   ];
 
   return (
@@ -48,18 +81,31 @@ export default function PortfolioGallery() {
           ))}
         </div>
 
-        {/* Small tags below portfolio */}
-        <div className="mt-20 flex flex-wrap gap-8 justify-center">
-          {[
-            { label: "UI/UX Design", done: "250+ Projetos" },
-            { label: "Desenvolvimento", done: "180+ Entregas" },
-            { label: "Identidade Visual", done: "120+ Marcas" },
-          ].map((tag, i) => (
-            <div key={i} className="flex flex-col items-center p-6 bg-black border border-white/10 rounded-xl min-w-[200px] hover:border-brand-dark transition-colors group">
-              <h4 className="text-xl font-bold text-white group-hover:text-brand-dark transition-colors">{tag.label}</h4>
-              <p className="text-brand font-bold mt-2">{tag.done}</p>
-            </div>
-          ))}
+        {/* Services Grid below portfolio */}
+        <div className="mt-32">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+            Serviços <span className="text-brand">Que Oferecemos.</span>
+          </h2>
+          <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-12">
+            Mostramos nossas soluções digitais, incluindo landing pages, sites institucionais, blogs, e-commerce, aplicações web e crms. Descubra como podemos transformar sua visão em realidade.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {servicesList.map((srv, i) => {
+              const Icon = srv.icon;
+              return (
+                <div key={i} className="bg-[#111111] p-8 md:p-10 rounded-2xl border border-white/5 hover:border-brand/30 transition-all group flex flex-col items-start gap-4 text-left">
+                  <Icon className="w-10 h-10 mb-2 text-white group-hover:text-brand transition-colors" strokeWidth={1.5} />
+                  <h3 className="text-2xl font-bold text-white group-hover:text-brand transition-colors">
+                    {srv.title}
+                  </h3>
+                  <p className="text-zinc-500 leading-relaxed text-sm md:text-base">
+                    {srv.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
