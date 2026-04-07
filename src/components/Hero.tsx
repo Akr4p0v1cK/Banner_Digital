@@ -13,19 +13,18 @@ export default function Hero() {
           <h4 className="text-white font-bold tracking-[0.2em] uppercase text-sm mb-2">Hello</h4>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-            Nós somos a <br />
+            Transformando<br />
             <span className="text-brand-dark inline-block mt-2 relative">
-              Banner Digital.
-              <span className="absolute -right-6 top-1/2 -translate-y-1/2 w-1 h-12 bg-zinc-500"></span>
+              visões em experiências digitais de elite.
             </span>
           </h1>
           
           <p className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mt-4">
-            Criamos experiências digitais imersivas que unem estética brutalista e sofisticação. Design ousado e focado em performance para marcas que desejam liderar o mercado.
+            Especialista em unir design de alto impacto e tecnologia de ponta para posicionar sua marca no topo do mercado digital.
           </p>
 
           <button className="mt-6 px-8 py-4 bg-brand-dark hover:bg-brand text-white hover:text-black font-semibold rounded-full flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(88,15,28,0.4)]">
-            Ver Projetos <span>→</span>
+            Iniciar meu Projeto <span>→</span>
           </button>
         </div>
 
@@ -35,7 +34,7 @@ export default function Hero() {
           {/* Background Solid Text (Behind) */}
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] text-center z-0">
             <h2 className="text-[6rem] lg:text-[10rem] font-black text-white leading-none whitespace-nowrap opacity-90">
-              WEB DESIGNER
+              FULLSTACK
             </h2>
           </div>
 
@@ -59,7 +58,7 @@ export default function Hero() {
               className="text-[4rem] lg:text-[7rem] font-black leading-none whitespace-nowrap text-transparent"
               style={{ WebkitTextStroke: '2px rgba(255,255,255,0.7)' }}
             >
-              WEB DESIGNER
+              FULLSTACK
             </h2>
           </div>
         </div>

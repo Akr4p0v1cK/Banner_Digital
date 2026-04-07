@@ -1,15 +1,13 @@
 export default function DesignSkills() {
   const designSkills = [
-    { label: "FIGMA & UI/UX", value: 95 },
-    { label: "MOTION DESIGN", value: 85 },
-    { label: "ADOBE CREATIVE SUITE", value: 90 },
-    { label: "BRANDING", value: 80 },
+    { label: "Direção de Arte Digital", value: 95 },
+    { label: "Prototipação de Alta Fidelidade", value: 90 },
+    { label: "Sistemas de Design (Design Systems)", value: 85 }
   ];
   const devSkills = [
-    { label: "NEXT.JS & REACT", value: 95 },
-    { label: "TAILWIND CSS", value: 95 },
-    { label: "TYPESCRIPT", value: 88 },
-    { label: "BACKEND & APIS", value: 80 },
+    { label: "Desenvolvimento Web (Next.js / React)", value: 95 },
+    { label: "Otimização de SEO & Core Web Vitals", value: 90 },
+    { label: "Integrações API & Back-end", value: 85 }
   ];
 
   return (
@@ -18,7 +16,7 @@ export default function DesignSkills() {
         
         {/* Left Column: Design Skill */}
         <div className="flex flex-col gap-10">
-          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Design</h2>
+          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Design & Branding</h2>
           <div className="flex flex-col gap-8">
             {designSkills.map((skill, index) => (
               <div key={index} className="flex flex-col gap-3 group">
@@ -38,7 +36,7 @@ export default function DesignSkills() {
 
         {/* Right Column: Development Skill */}
         <div className="flex flex-col gap-10">
-          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Engenharia</h2>
+          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Tech & Performance</h2>
           <div className="flex flex-col gap-8">
             {devSkills.map((skill, index) => (
               <div key={`dev-${index}`} className="flex flex-col gap-3 group">

@@ -1,9 +1,9 @@
 export default function Stats() {
   const rightStats = [
-    { value: "250+", label: "Projetos Entregues" },
-    { value: "50+", label: "Marcas Escaladas" },
-    { value: "100%", label: "Satisfação" },
-    { value: "5+", label: "Prêmios de Design" },
+    { value: "+5", label: "Anos criando soluções disruptivas no mercado" },
+    { value: "+150", label: "Projetos entregues com foco em performance" },
+    { value: "100%", label: "De satisfação e suporte ativo aos parceiros" },
+    { value: "Global", label: "Atendimento para marcas em todo o mundo" },
   ];
 
   return (
@@ -14,14 +14,14 @@ export default function Stats() {
           {/* Main Left Card */}
           <div className="w-full lg:w-5/12 bg-[#111111] rounded-2xl p-10 md:p-14 border border-white/5 flex flex-col justify-center gap-6">
             <div className="flex items-center gap-6">
-              <span className="text-[6rem] md:text-[8rem] font-black text-brand leading-none">10+</span>
+              <span className="text-[6rem] md:text-[8rem] font-black text-brand leading-none">+5</span>
               <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                 Anos De <br/> Experiência
               </h3>
             </div>
             
             <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-              Mais de uma década transformando visão em realidade digital. Desenvolvemos soluções com precisão milimétrica e estética inconfundível.
+              Criando soluções disruptivas no mercado. Unimos talento e visão para moldar ativos digitais projetados para escalar de forma contínua.
             </p>
           </div>
 

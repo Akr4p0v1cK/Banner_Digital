@@ -3,10 +3,10 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function PortfolioGallery() {
   const projects = [
-    { title: "E-commerce Premium", category: "Varejo & Luxo", image: "/images/portfolio_1.png" },
-    { title: "Plataforma de Investimentos", category: "Fintech", image: "/images/portfolio_2.png" },
-    { title: "Aplicativo de Concierge", category: "Mobile App", image: "/images/portfolio_3.png" },
-    { title: "Rebranding Corporativo", category: "Identidade Visual", image: "/images/portfolio_4.png" }
+    { title: "Ecossistema E-commerce Premium", category: "E-commerce", image: "/images/portfolio_1.png" },
+    { title: "Plataforma SaaS de Alta Performance", category: "SaaS", image: "/images/portfolio_2.png" },
+    { title: "Landing Page de Lançamento Viral", category: "Landing Page", image: "/images/portfolio_3.png" },
+    { title: "Portal Institucional Corporativo", category: "Institucional", image: "/images/portfolio_4.png" }
   ];
 
   return (

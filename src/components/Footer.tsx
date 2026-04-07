@@ -8,10 +8,10 @@ export default function Footer() {
           {/* Main Title Col */}
           <div className="lg:col-span-2 shadow-sm pr-10">
             <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight">
-              Pronto Para <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-dark">Construir Algo Grandioso?</span>
+              Vamos projetar o futuro da sua <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-dark">empresa de forma extraordinária.</span>
             </h2>
             <p className="text-zinc-500 leading-relaxed max-w-md">
-              Banner Digital. Redefinindo a estética na web com agressividade, alta performance e sofisticação inigualável.
+              Não construímos apenas sites; criamos ativos digitais que trabalham para o seu negócio.
             </p>
           </div>
 
@@ -19,11 +19,10 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <h4 className="text-xl font-bold text-white mb-2">Links Rápidos</h4>
             <ul className="flex flex-col gap-4 text-zinc-400">
-              <li><a href="#" className="hover:text-brand transition-colors">A Agência</a></li>
+              <li><a href="#" className="hover:text-brand transition-colors">Home</a></li>
               <li><a href="#" className="hover:text-brand transition-colors">Serviços</a></li>
-              <li><a href="#" className="hover:text-brand transition-colors">Projetos</a></li>
-              <li><a href="#" className="hover:text-brand transition-colors">Artigos</a></li>
-              <li><a href="#" className="hover:text-brand transition-colors">Contato</a></li>
+              <li><a href="#" className="hover:text-brand transition-colors">Cases</a></li>
+              <li><a href="#" className="hover:text-brand transition-colors">Metodologia</a></li>
             </ul>
           </div>
 
@@ -31,8 +30,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <h4 className="text-xl font-bold text-white mb-2">Contato</h4>
             <ul className="flex flex-col gap-4 text-zinc-400">
-              <li><a href="mailto:contato@bannerdigital.com.br" className="hover:text-brand transition-colors text-lg font-medium text-white">contato@bannerdigital.com.br</a></li>
-              <li>São Paulo, SP</li>
+              <li><a href="mailto:contato@seunome.com" className="hover:text-brand transition-colors text-lg font-medium text-white">contato@seunome.com</a></li>
               <li><a href="tel:+5511999999999" className="hover:text-brand transition-colors text-brand font-bold text-xl">+55 11 99999-9999</a></li>
             </ul>
           </div>

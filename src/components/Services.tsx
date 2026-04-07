@@ -3,23 +3,23 @@ import { PenTool, Layout, Search, Mail } from 'lucide-react';
 export default function Services() {
   const services = [
     {
-      title: "Web Design",
-      projects: "Layouts Exclusivos",
+      title: "Interface Estratégica (UI)",
+      projects: "Design de Alto Impacto",
       icon: PenTool,
     },
     {
-      title: "Engenharia UI/UX",
-      projects: "Foco em Conversão",
+      title: "Experiência do Usuário (UX)",
+      projects: "Foco na Jornada do Cliente",
       icon: Layout,
     },
     {
-      title: "Análise de Marca",
-      projects: "Estratégia Posicionamento",
+      title: "Desenvolvimento Performance",
+      projects: "Next.js & Alta Velocidade",
       icon: Search,
     },
     {
-      title: "Growth Marketing",
-      projects: "Escala e Resultados",
+      title: "Arquitetura de Conversão",
+      projects: "Geração de Resultados",
       icon: Mail,
     }
   ];

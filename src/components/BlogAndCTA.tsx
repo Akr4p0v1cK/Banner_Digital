@@ -28,14 +28,14 @@ export default function BlogAndCTA() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-dark/20 blur-[100px] rounded-full pointer-events-none"></div>
           
           <h2 className="text-5xl md:text-7xl font-black text-white relative z-10 max-w-4xl tracking-tight leading-tight">
-            Eleve sua marca para <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-dark">o próximo nível</span>
+            Sua marca está pronta para <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-dark">o próximo nível?</span>
           </h2>
           <p className="text-zinc-400 text-lg md:text-xl max-w-2xl relative z-10">
-            Chega de design genérico. Construa uma presença digital imponente, de alto impacto visual e focada 100% em escalar o negócio da sua empresa.
+            Não construímos apenas sites; criamos ativos digitais que trabalham para o seu negócio 24 horas por dia.
           </p>
           <a href="#" className="relative z-10 inline-block px-10 py-5 bg-brand text-black font-bold text-lg uppercase tracking-wider rounded-full hover:bg-brand-dark transition-colors mt-4">
-            Iniciar Projeto
+            Solicitar Diagnóstico Gratuito
           </a>
         </div>
       </div>

@@ -4,18 +4,18 @@ export default function Features() {
   const features = [
     {
       num: "01.",
-      title: "Estética Inconfundível",
-      desc: "Unimos a força do brutalismo à elegância do luxo para criar interfaces que quebram o padrão e geram impacto visual imediato."
+      title: "Diagnóstico",
+      desc: "Identificação de gargalos na conversão."
     },
     {
       num: "02.",
-      title: "Experiências Imersivas",
-      desc: "Foco absoluto na jornada do usuário. Aliamos layouts dinâmicos e microinterações para prender a atenção desde o primeiro segundo."
+      title: "Execução",
+      desc: "Desenvolvimento de interface exclusiva e veloz."
     },
     {
       num: "03.",
-      title: "Alta Engenharia",
-      desc: "Desenvolvimento hiper-otimizado com as stacks mais avançadas, garantindo velocidade extrema, SEO aprimorado e segurança máxima."
+      title: "Resultado",
+      desc: "Aumento métrico em engajamento e vendas."
     }
   ];
 
@@ -35,10 +35,10 @@ export default function Features() {
             />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight mt-6 text-white text-balance">
-            Redefinindo o <span className="text-brand">Padrão Digital</span>
+            Inovação que gera resultado: <span className="text-brand">O Case Premium</span>
           </h2>
           <p className="text-zinc-400 text-lg">
-            Abandonamos templates genéricos. Cada projeto é uma peça de arte funcional construída sob medida para transmitir exclusividade, autoridade e converter visitantes em clientes fiéis.
+            Uma análise profunda de como aplicamos design centrado no usuário para escalar o faturamento e a presença digital deste projeto.
           </p>
         </div>
 
