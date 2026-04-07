@@ -10,7 +10,7 @@ export default function Navbar() {
       <Link href="/" className="flex items-center">
         <div className="relative w-[140px] h-[50px]">
           <Image 
-            src="/images/logo_aethel.jpg" 
+            src="/images/logo.png" 
             alt="Aethel Logo" 
             fill 
             className="object-contain" 

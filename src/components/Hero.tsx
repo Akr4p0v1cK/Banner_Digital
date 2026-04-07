@@ -43,7 +43,7 @@ export default function Hero() {
             <div className="w-[80%] h-[80%] bg-zinc-800 rounded-t-full relative overflow-hidden border-b-0 border border-zinc-700 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-10"></div>
               <Image 
-                src="/images/foto_perfil.png" 
+                src="/images/hero_perfil.png" 
                 alt="Banner Digital Portrait" 
                 fill 
                 className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700 opacity-90" 
