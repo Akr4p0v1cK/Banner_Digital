@@ -128,8 +128,10 @@ export default function GlobalCanvasBackground() {
     <div className="fixed inset-0 z-0 pointer-events-none bg-black">
       <canvas 
         ref={canvasRef}
-        className="w-full h-full object-cover opacity-60 mix-blend-lighten"
+        className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-lighten"
       />
+      {/* Camada de escurecimento e desfoque */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px] z-10"></div>
     </div>
   );
 }
