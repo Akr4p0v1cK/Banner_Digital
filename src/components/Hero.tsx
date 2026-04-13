@@ -4,6 +4,12 @@ import { motion, useScroll, useMotionValueEvent, useTransform } from "framer-mot
 import { useEffect, useRef } from "react";
 
 export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
   const contentOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 0.4], [0, -100]);
 
