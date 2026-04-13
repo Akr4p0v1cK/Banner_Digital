@@ -14,7 +14,7 @@ export default function Hero() {
   const contentY = useTransform(scrollYProgress, [0, 0.4], [0, -100]);
 
   return (
-    <section ref={containerRef} className="relative w-full h-[400vh] bg-transparent">
+    <section ref={containerRef} className="relative w-full h-[150vh] bg-transparent">
       <div className="sticky top-0 left-0 w-full h-screen flex items-center pt-20 bg-transparent">
         
         <motion.div 

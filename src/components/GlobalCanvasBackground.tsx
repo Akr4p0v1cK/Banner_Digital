@@ -31,17 +31,14 @@ export default function GlobalCanvasBackground() {
     
     let drawWidth, drawHeight, drawX, drawY;
     
-    if (canvasRatio > imgRatio) {
-      drawWidth = canvas.width;
-      drawHeight = canvas.width / imgRatio;
-      drawX = 0;
-      drawY = (canvas.height - drawHeight) / 2;
-    } else {
-      drawHeight = canvas.height;
-      drawWidth = canvas.height * imgRatio;
-      drawY = 0;
-      drawX = (canvas.width - drawWidth) / 2;
-    }
+    // Configura o preenchimento (object-contain com folga ou scale)
+    // Para que não fique "tão gigante", calculamos a proporção para caber na tela
+    const scale = Math.min(canvas.width / img.width, canvas.height / img.height) * 1.1; 
+    
+    drawWidth = img.width * scale;
+    drawHeight = img.height * scale;
+    drawX = (canvas.width - drawWidth) / 2;
+    drawY = (canvas.height - drawHeight) / 2;
     
     ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
   };
