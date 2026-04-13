@@ -20,7 +20,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="w-full py-24 bg-[#0a0a0a]">
+    <section className="w-full py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-16 items-center">
         
         {/* Left Side: Image and Heading */}

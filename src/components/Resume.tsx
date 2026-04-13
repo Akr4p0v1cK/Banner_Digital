@@ -11,7 +11,7 @@ export default function Resume() {
   ];
 
   return (
-    <section className="w-full py-24 bg-black border-y border-white/5">
+    <section className="w-full py-24 bg-transparent border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
         
         {/* Education Column */}

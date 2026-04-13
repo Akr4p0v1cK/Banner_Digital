@@ -4,114 +4,13 @@ import { motion, useScroll, useMotionValueEvent, useTransform } from "framer-mot
 import { useEffect, useRef } from "react";
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const imagesRef = useRef<HTMLImageElement[]>([]);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
-
-  // Preload frames for the scroll-bound canvas sequence
-  useEffect(() => {
-    const frameCount = 80;
-    const loadedImages: HTMLImageElement[] = [];
-    
-    for (let i = 0; i < frameCount; i++) {
-         const img = new window.Image();
-         const numStr = i.toString().padStart(3, '0');
-         img.src = `/heroslide/Whisk_ywz2czmkzzn4ewy30inxmmytujykrtl5ydoz0yn_${numStr}.jpg`;
-         
-         img.onload = () => {
-           if (i === 0) {
-             renderFrame(img);
-           }
-         };
-         loadedImages.push(img);
-    }
-    
-    imagesRef.current = loadedImages;
-  }, []);
-
-  const renderFrame = (img: HTMLImageElement) => {
-    if (!canvasRef.current) return;
-    const canvas = canvasRef.current;
-    
-    if (canvas.width !== window.innerWidth || canvas.height !== window.innerHeight) {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    
-    ctx.clearRect(0, 0, canvas.width, canvas.height); 
-    
-    const imgRatio = img.width / img.height;
-    const canvasRatio = canvas.width / canvas.height;
-    
-    let drawWidth, drawHeight, drawX, drawY;
-    
-    if (canvasRatio > imgRatio) {
-      drawWidth = canvas.width;
-      drawHeight = canvas.width / imgRatio;
-      drawX = 0;
-      drawY = (canvas.height - drawHeight) / 2;
-    } else {
-      drawHeight = canvas.height;
-      drawWidth = canvas.height * imgRatio;
-      drawY = 0;
-      drawX = (canvas.width - drawWidth) / 2;
-    }
-    
-    ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
-  };
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const images = imagesRef.current;
-    if (images.length === 0) return;
-    
-    const frameIndex = Math.min(
-      images.length - 1,
-      Math.floor(latest * images.length)
-    );
-    
-    if (images[frameIndex] && images[frameIndex].complete && images[frameIndex].naturalWidth > 0) {
-      requestAnimationFrame(() => renderFrame(images[frameIndex]));
-    }
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      const images = imagesRef.current;
-      if (images.length > 0 && canvasRef.current) {
-        const frameIndex = Math.min(
-          images.length - 1,
-          Math.floor(scrollYProgress.get() * images.length)
-        );
-        if (images[frameIndex] && images[frameIndex].complete) {
-          renderFrame(images[frameIndex]);
-        }
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [scrollYProgress]);
-
   const contentOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 0.4], [0, -100]);
 
   return (
-    <section ref={containerRef} className="relative w-full h-[400vh] bg-black">
-      <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center pt-20 bg-black">
+    <section ref={containerRef} className="relative w-full h-[400vh] bg-transparent">
+      <div className="sticky top-0 left-0 w-full h-screen flex items-center pt-20 bg-transparent">
         
-        {/* Canvas animation background */}
-        <canvas 
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-100 mix-blend-lighten"
-        />
-
         <motion.div 
           style={{ opacity: contentOpacity, y: contentY }}
           className="max-w-7xl mx-auto w-full px-6 md:px-12 flex flex-col-reverse lg:flex-row items-center relative z-10 gap-16 lg:gap-0 h-full"

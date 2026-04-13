@@ -11,7 +11,7 @@ export default function DesignSkills() {
   ];
 
   return (
-    <section className="w-full py-20 bg-black text-white border-t border-white/5">
+    <section className="w-full py-20 bg-transparent text-white border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-16">
         
         {/* Left Column: Design Skill */}

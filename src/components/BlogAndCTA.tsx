@@ -19,11 +19,11 @@ export default function BlogAndCTA() {
   ];
 
   return (
-    <section className="w-full pb-24 pt-12 bg-black flex flex-col gap-32">
+    <section className="w-full pb-24 pt-12 bg-transparent flex flex-col gap-32">
       
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
-        <div className="w-full bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] p-12 md:p-20 rounded-3xl border border-white/5 relative overflow-hidden flex flex-col items-center text-center gap-8 shadow-2xl">
+        <div className="w-full bg-gradient-to-r from-[#0f0f0f]/80 to-[#1a1a1a]/80 backdrop-blur-md p-12 md:p-20 rounded-3xl border border-white/5 relative overflow-hidden flex flex-col items-center text-center gap-8 shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-brand/20 blur-[100px] rounded-full pointer-events-none"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-dark/20 blur-[100px] rounded-full pointer-events-none"></div>
           
@@ -48,7 +48,7 @@ export default function BlogAndCTA() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map((post, idx) => (
-            <div key={idx} className="bg-[#0a0a0a] rounded-2xl p-8 border border-white/5 hover:border-brand-dark/50 transition-colors group flex flex-col justify-between h-full">
+            <div key={idx} className="bg-[#0a0a0a]/70 backdrop-blur-md rounded-2xl p-8 border border-white/5 hover:border-brand-dark/50 transition-colors group flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-brand mb-6">
                   <span>{post.author}</span>

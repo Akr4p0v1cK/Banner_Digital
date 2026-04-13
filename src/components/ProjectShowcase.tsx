@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const projects = [
   { id: "01", title: "Digital Transformation Advisors", tag: "Development Coaches", img: "https://reeni-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimages%2Flatest-portfolio%2Fportfoli-img-1.jpg&w=3840&q=75" },
   { id: "02", title: "My work is driven by the belief", tag: "Development App", img: "https://reeni-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimages%2Flatest-portfolio%2Fportfoli-img-2.jpg&w=3840&q=75" },
@@ -21,7 +23,7 @@ export default function ProjectShowcase() {
         {/* Asymmetric 90/10 Layout with Hover Images */}
         <div className="flex flex-col gap-0 border-t border-zinc-800 border-solid relative">
           {projects.map((proj) => (
-            <a key={proj.id} href="#" className="group flex flex-col items-start md:flex-row md:items-baseline justify-between py-12 border-b border-zinc-800 border-solid hover:bg-zinc-950 transition-colors px-4 relative overflow-hidden md:overflow-visible">
+            <Link key={proj.id} href="#" className="group flex flex-col items-start md:flex-row md:items-baseline justify-between py-12 border-b border-zinc-800 border-solid hover:bg-zinc-950 transition-colors px-4 relative overflow-hidden md:overflow-visible">
               <div className="flex flex-col md:flex-row items-start md:items-baseline gap-4 md:gap-16 z-10 w-full md:w-2/3">
                 <span className="text-sm font-mono text-brand border border-brand px-2 py-1 rounded-none group-hover:bg-brand group-hover:text-black transition-colors">{proj.id}</span>
                 <h3 className="text-3xl md:text-5xl font-bold tracking-tight group-hover:pl-4 transition-all duration-300">
@@ -37,7 +39,7 @@ export default function ProjectShowcase() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={proj.img} alt={proj.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" />
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

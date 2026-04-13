@@ -42,7 +42,7 @@ export default function PortfolioGallery() {
   ];
 
   return (
-    <section className="w-full py-24 bg-[#0a0a0a]">
+    <section className="w-full py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
           Serviços <span className="text-brand">Que Oferecemos.</span>
@@ -55,7 +55,7 @@ export default function PortfolioGallery() {
           {integratedItems.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div key={idx} className="group relative block overflow-hidden rounded-2xl bg-[#111111] border border-white/5 cursor-pointer flex flex-col h-full hover:border-brand/30 transition-all">
+              <div key={idx} className="group relative block overflow-hidden rounded-2xl bg-[#111111]/70 backdrop-blur-md border border-white/5 cursor-pointer flex flex-col h-full hover:border-brand/30 transition-all">
                 {/* Image Container */}
                 <div className="w-full h-[220px] overflow-hidden relative shrink-0">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/30 to-brand-dark/10 z-10 pointer-events-none"></div>

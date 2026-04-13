@@ -1,0 +1,35 @@
+﻿
+C:\Users\AMD\Downloads\Banner Digital\portfolio\src\components\Hero.tsx
+  25:7  error  Error: Cannot access variable before it is declared
+
+`renderFrame` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Users\AMD\Downloads\Banner Digital\portfolio\src\components\Hero.tsx:25:7
+  23 |     firstImg.src = `/heroslide/Whisk_ywz2czmkzzn4ewy30inxmmytujykrtl5ydoz0yn_000.jpg`;
+  24 |     firstImg.onload = () => {
+> 25 |       renderFrame(firstImg);
+     |       ^^^^^^^^^^^ `renderFrame` accessed before it is declared
+  26 |       
+  27 |       // Load rest progressively to avoid blocking main thread
+  28 |       let currentIndex = 1;
+
+C:\Users\AMD\Downloads\Banner Digital\portfolio\src\components\Hero.tsx:64:3
+   62 |   }, []);
+   63 |
+>  64 |   const renderFrame = (img: HTMLImageElement) => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  65 |     if (!canvasRef.current || !img.complete || img.naturalWidth === 0) return;
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  66 |     const canvas = canvasRef.current;
+      ÔÇª
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  98 |     ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  99 |   };
+      | ^^^^^ `renderFrame` is declared here
+  100 |
+  101 |   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  102 |     const images = imagesRef.current;  react-hooks/immutability
+
+Ô£û 1 problem (1 error, 0 warnings)
+

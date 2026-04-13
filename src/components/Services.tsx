@@ -25,7 +25,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="w-full py-16 bg-[#0a0a0a]">
+    <section className="w-full py-16 bg-transparent">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
@@ -33,7 +33,7 @@ export default function Services() {
             return (
               <div 
                 key={index} 
-                className="bg-[#111111] border border-white/5 rounded-2xl p-10 flex flex-col items-center text-center hover:border-brand/30 transition-all group"
+                className="bg-[#111111]/70 backdrop-blur-md border border-white/5 rounded-none p-10 flex flex-col items-center text-center hover:border-brand/30 transition-all group"
               >
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Icon className="w-10 h-10 text-brand group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
