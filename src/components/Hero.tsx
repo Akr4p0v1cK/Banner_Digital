@@ -15,7 +15,7 @@ export default function Hero() {
 
   return (
     <section ref={containerRef} className="relative w-full h-[150vh] bg-transparent">
-      <div className="sticky top-0 left-0 w-full h-screen flex items-center pt-20 bg-transparent">
+      <div className="sticky top-0 left-0 w-full h-[100dvh] flex items-center pt-20 bg-transparent overflow-hidden">
         
         <motion.div 
           style={{ opacity: contentOpacity, y: contentY }}
