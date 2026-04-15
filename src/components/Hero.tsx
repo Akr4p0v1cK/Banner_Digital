@@ -28,14 +28,14 @@ export default function Hero() {
 
   return (
     <section ref={containerRef} className="relative w-full h-[150vh] bg-transparent">
-      <div className="sticky top-0 left-0 w-full h-[100dvh] flex items-center pt-20 bg-transparent overflow-hidden">
+      <div className="sticky top-0 left-0 w-full h-[100dvh] flex items-center pt-16 sm:pt-20 bg-transparent overflow-hidden">
         
         <motion.div 
           style={{ opacity: contentOpacity, y: contentY }}
-          className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-12 flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between relative z-10 gap-8 lg:gap-0 h-full"
+          className="max-w-7xl mx-auto w-full px-5 sm:px-6 md:px-12 flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between relative z-10 gap-4 sm:gap-8 lg:gap-0 h-full"
         >
           {/* Left Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 lg:gap-6 relative z-20">
+          <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left gap-3 sm:gap-4 lg:gap-6 relative z-20">
             <motion.h4 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function Hero() {
               animate="visible"
               className="flex flex-col gap-4 lg:gap-6 items-center lg:items-start w-full"
             >
-              <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mt-2 lg:mt-0 text-center lg:text-left">
+              <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.08] tracking-tight mt-2 lg:mt-0 text-center lg:text-left">
                 <div className="overflow-hidden">
                   <motion.div variants={titleVariant} className="origin-bottom-left">
                     Transformando
@@ -86,7 +86,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 data-cursor-hover="true"
-                className="mt-2 lg:mt-4 px-6 lg:px-8 py-3 lg:py-4 bg-brand-dark hover:bg-brand text-white hover:text-black font-semibold rounded-full flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(88,15,28,0.4)] text-sm lg:text-base cursor-none"
+                className="mt-2 lg:mt-4 px-5 sm:px-6 lg:px-8 py-3 lg:py-4 bg-brand-dark hover:bg-brand text-white hover:text-black font-semibold rounded-full flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(88,15,28,0.4)] text-xs sm:text-sm lg:text-base cursor-none"
               >
                 Ver Portfólio <span>→</span>
               </motion.button>
@@ -95,7 +95,7 @@ export default function Hero() {
           </div>
 
           {/* Right Content */}
-          <div className="w-full lg:w-1/2 relative h-[350px] sm:h-[450px] lg:h-[800px] flex justify-center items-end mt-4 lg:mt-0">
+          <div className="w-full lg:w-1/2 relative h-[260px] sm:h-[380px] md:h-[450px] lg:h-[800px] flex justify-center items-end mt-2 lg:mt-0">
             
             {/* Background "FULLSTACK" text with blur */}
             <motion.div 
@@ -104,7 +104,7 @@ export default function Hero() {
               transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
               className="absolute top-[20%] lg:top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] text-center z-0"
             >
-              <h2 className="text-[3.5rem] sm:text-[5rem] md:text-[6rem] lg:text-[10rem] font-black text-white leading-none whitespace-nowrap opacity-80 drop-shadow-2xl backdrop-blur-[1px]">
+              <h2 className="text-[2.5rem] sm:text-[4rem] md:text-[6rem] lg:text-[10rem] font-black text-white leading-none whitespace-nowrap opacity-80 drop-shadow-2xl backdrop-blur-[1px]">
                 FULLSTACK
               </h2>
             </motion.div>
@@ -149,7 +149,7 @@ export default function Hero() {
               className="absolute bottom-5 lg:bottom-10 left-1/2 -translate-x-1/2 w-[150%] text-center z-20 pointer-events-none"
             >
               <h2 
-                className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[7rem] font-black leading-none whitespace-nowrap text-transparent drop-shadow-lg backdrop-blur-[0.5px]"
+                className="text-[2rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[7rem] font-black leading-none whitespace-nowrap text-transparent drop-shadow-lg backdrop-blur-[0.5px]"
                 style={{ WebkitTextStroke: '1px rgba(255,255,255,0.5)' }}
               >
                 FULLSTACK

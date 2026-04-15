@@ -10,10 +10,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 py-4 md:py-6 px-4 md:px-12 flex items-center justify-between bg-black/90 backdrop-blur-md border-b border-white/10">
+      <header className="fixed top-0 left-0 w-full z-50 py-3 sm:py-4 md:py-6 px-4 sm:px-6 md:px-12 flex items-center justify-between bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <div className="relative w-[160px] sm:w-[200px] md:w-[260px] h-[60px] sm:h-[75px] md:h-[95px]">
+          <div className="relative w-[120px] sm:w-[160px] md:w-[260px] h-[45px] sm:h-[60px] md:h-[95px]">
             <Image 
               src="/images/logo.png" 
               alt="Aethel Logo" 
@@ -53,7 +53,7 @@ export default function Navbar() {
           
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-dark flex items-center justify-center text-white shadow-[0_0_15px_rgba(88,15,28,0.5)] hover:bg-brand hover:text-black transition-all"
+            className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-brand-dark flex items-center justify-center text-white shadow-[0_0_15px_rgba(88,15,28,0.5)] hover:bg-brand hover:text-black transition-all"
           >
             {isMobileMenuOpen ? <X className="w-5 h-5 md:w-6 md:h-6" /> : <Menu className="w-5 h-5 md:w-6 md:h-6" />}
           </button>
@@ -62,7 +62,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center lg:hidden">
+        <div className="fixed inset-0 z-40 bg-[#0a0a0a]/98 backdrop-blur-xl flex flex-col items-center justify-center lg:hidden">
           <nav className="flex flex-col items-center gap-8 text-2xl font-bold text-white tracking-wider">
             <Link href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand transition-colors">Home</Link>
             <Link href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand transition-colors">About</Link>

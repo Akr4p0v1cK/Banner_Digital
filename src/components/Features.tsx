@@ -31,8 +31,8 @@ export default function Features() {
   ];
 
   return (
-    <section className="w-full py-28 lg:py-40 bg-transparent">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-20 items-center">
+    <section className="w-full py-20 sm:py-28 lg:py-40 bg-transparent">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 flex flex-col lg:flex-row gap-12 sm:gap-16 lg:gap-20 items-center">
         
         {/* Left Side: Image and Heading */}
         <motion.div
@@ -42,7 +42,7 @@ export default function Features() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="w-full lg:w-1/2 flex flex-col gap-8"
         >
-          <div className="w-full h-[400px] bg-zinc-900 rounded-2xl overflow-hidden relative border border-white/5 shadow-2xl group">
+          <div className="w-full h-[280px] sm:h-[350px] md:h-[400px] bg-zinc-900 rounded-2xl overflow-hidden relative border border-white/5 shadow-2xl group">
             {/* Glow aura behind the image */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-brand-dark/30 via-transparent to-brand/10 blur-2xl pointer-events-none opacity-60"></div>
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-dark/40 to-transparent z-20 pointer-events-none mix-blend-overlay"></div>
@@ -53,16 +53,16 @@ export default function Features() {
               className="object-cover opacity-90 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
             />
           </div>
-          <h2 className="text-4xl md:text-6xl font-black leading-tight mt-2 text-white text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mt-2 text-white text-balance">
             Inovação que gera resultado: <span className="text-brand">O Case Premium</span>
           </h2>
-          <p className="text-zinc-500 text-lg leading-relaxed">
+          <p className="text-zinc-500 text-base sm:text-lg leading-relaxed">
             Uma análise profunda de como aplicamos design centrado no usuário para escalar o faturamento e a presença digital deste projeto.
           </p>
         </motion.div>
 
         {/* Right Side: Features List */}
-        <div className="w-full lg:w-1/2 flex flex-col gap-14">
+        <div className="w-full lg:w-1/2 flex flex-col gap-10 sm:gap-14">
           {features.map((item, idx) => (
             <motion.div
               key={idx}
@@ -73,7 +73,7 @@ export default function Features() {
               viewport={{ once: true, margin: "-60px" }}
               className="flex gap-6 group cursor-default"
             >
-              <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-brand to-brand-dark group-hover:scale-110 transition-transform duration-300 shrink-0">
+              <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-brand to-brand-dark group-hover:scale-110 transition-transform duration-300 shrink-0">
                 {item.num}
               </div>
               <div className="flex flex-col gap-3">

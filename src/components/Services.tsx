@@ -36,7 +36,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="w-full py-28 lg:py-36 bg-transparent">
+    <section className="w-full py-20 sm:py-28 lg:py-36 bg-transparent">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
@@ -50,7 +50,7 @@ export default function Services() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-80px" }}
                 data-cursor-hover="true"
-                className="relative bg-[#111111]/60 backdrop-blur-md border border-white/5 rounded-none p-10 flex flex-col items-center text-center group overflow-hidden transition-all duration-500 hover:border-brand/30 hover:shadow-[0_0_40px_rgba(212,175,55,0.06)]"
+                className="relative bg-[#111111]/60 backdrop-blur-md border border-white/5 rounded-none p-7 sm:p-10 flex flex-col items-center text-center group overflow-hidden transition-all duration-500 hover:border-brand/30 hover:shadow-[0_0_40px_rgba(212,175,55,0.06)]"
               >
                 {/* Subtle glow on hover */}
                 <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-40 h-40 bg-brand/10 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>

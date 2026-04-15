@@ -23,8 +23,8 @@ export default function DesignSkills() {
   ];
 
   return (
-    <section className="w-full py-28 lg:py-36 bg-transparent text-white border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-20">
+    <section className="w-full py-20 sm:py-28 lg:py-36 bg-transparent text-white border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-14 sm:gap-20">
         
         {/* Left Column: Design Skill */}
         <motion.div
@@ -32,10 +32,10 @@ export default function DesignSkills() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col gap-12"
+          className="flex flex-col gap-8 sm:gap-12"
         >
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-wide">Design & Branding</h2>
-          <div className="flex flex-col gap-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wide">Design & Branding</h2>
+          <div className="flex flex-col gap-7 sm:gap-10">
             {designSkills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -70,10 +70,10 @@ export default function DesignSkills() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col gap-12"
+          className="flex flex-col gap-8 sm:gap-12"
         >
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-wide">Tech & Performance</h2>
-          <div className="flex flex-col gap-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wide">Tech & Performance</h2>
+          <div className="flex flex-col gap-7 sm:gap-10">
             {devSkills.map((skill, index) => (
               <motion.div
                 key={`dev-${index}`}

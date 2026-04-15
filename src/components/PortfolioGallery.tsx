@@ -53,18 +53,18 @@ export default function PortfolioGallery() {
   ];
 
   return (
-    <section className="w-full py-28 lg:py-40 bg-transparent">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="w-full py-20 sm:py-28 lg:py-40 bg-transparent">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-3 sm:mb-4 tracking-tight">
             Serviços <span className="text-brand">Que Oferecemos.</span>
           </h2>
-          <p className="text-zinc-500 text-lg md:text-xl max-w-3xl mb-20 leading-relaxed">
+          <p className="text-zinc-500 text-base sm:text-lg md:text-xl max-w-3xl mb-12 sm:mb-20 leading-relaxed">
             Soluções digitais completas — de landing pages a aplicações web complexas. Descubra como transformamos visão em realidade.
           </p>
         </motion.div>
@@ -105,7 +105,7 @@ export default function PortfolioGallery() {
                 </div>
                 
                 {/* Content */}
-                <div className="p-8 flex flex-col grow relative">
+                <div className="p-6 sm:p-8 flex flex-col grow relative">
                   {/* Glow on hover */}
                   <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-brand/8 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                   
