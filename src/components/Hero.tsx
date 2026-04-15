@@ -128,13 +128,13 @@ export default function Hero() {
                 {/* Touch Group Container */}
                 <div 
                   data-cursor-hover="true"
-                  className="group w-full h-[90%] lg:h-full relative overflow-hidden rounded-t-[60px] lg:rounded-t-[100px] border-b border-brand-dark/30 backdrop-blur-[2px] pointer-events-auto cursor-none"
+                  className="group w-[90%] lg:w-full h-[50%] sm:h-[60%] lg:h-[70%] relative overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-dark/30 shadow-[0_0_50px_rgba(88,15,28,0.3)] pointer-events-auto cursor-none mb-[15dvh] lg:mb-20"
                 >
                   <Image 
-                    src="/images/hero_perfil.png" 
-                    alt="Banner Digital Portrait" 
+                    src="/images/hero_new.jpg" 
+                    alt="Aethel Technology Showcase" 
                     fill 
-                    className="object-cover object-top grayscale group-hover:grayscale-0 active:grayscale-0 transition-all duration-700 opacity-95 group-hover:scale-105 active:scale-105" 
+                    className="object-cover object-center grayscale group-hover:grayscale-0 active:grayscale-0 transition-all duration-700 opacity-95 group-hover:scale-105 active:scale-105" 
                     priority
                   />
                 </div>
