@@ -109,32 +109,32 @@ export default function Hero() {
               </h2>
             </motion.div>
 
-            {/* Profile Image */}
+            {/* Main Showcase Image */}
             <motion.div 
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-              className="relative z-10 w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[500px] h-full flex items-end justify-center pointer-events-none"
+              className="relative z-10 w-full max-w-[95vw] sm:max-w-[600px] lg:max-w-[800px] lg:-ml-10 h-full flex items-center lg:items-end justify-center pointer-events-none"
             >
               <motion.div 
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="w-full lg:w-[85%] h-full lg:h-[85%] relative overflow-visible flex items-end justify-center"
+                className="w-full h-[60%] sm:h-[70%] lg:h-[75%] relative overflow-visible flex items-end justify-center"
               >
-                {/* Glow effect behind portrait */}
+                {/* Glow effect behind image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-transparent blur-3xl scale-110 z-0 pointer-events-none"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent z-10 lg:from-[#0a0a0a] lg:via-[#0a0a0a]/50"></div>
                 
                 {/* Touch Group Container */}
                 <div 
                   data-cursor-hover="true"
-                  className="group w-[90%] lg:w-full h-[50%] sm:h-[60%] lg:h-[70%] relative overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-dark/30 shadow-[0_0_50px_rgba(88,15,28,0.3)] pointer-events-auto cursor-none mb-[15dvh] lg:mb-20"
+                  className="group w-full h-full relative overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-dark/30 shadow-[0_0_50px_rgba(88,15,28,0.3)] pointer-events-auto cursor-none mb-[5dvh] lg:mb-12"
                 >
                   <Image 
                     src="/images/hero_new.jpg" 
                     alt="Aethel Technology Showcase" 
                     fill 
-                    className="object-cover object-center grayscale group-hover:grayscale-0 active:grayscale-0 transition-all duration-700 opacity-95 group-hover:scale-105 active:scale-105" 
+                    className="object-cover object-center grayscale group-hover:grayscale-0 active:grayscale-0 transition-all duration-700 opacity-[0.85] group-hover:opacity-100 group-hover:scale-105 active:scale-105" 
                     priority
                   />
                 </div>
