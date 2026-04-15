@@ -1,3 +1,14 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.7, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }
+  })
+};
 
 export default function Resume() {
   const education = [
@@ -11,49 +22,77 @@ export default function Resume() {
   ];
 
   return (
-    <section className="w-full py-24 bg-transparent border-y border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <section className="w-full py-28 lg:py-40 bg-transparent border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20">
         
         {/* Education Column */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-12 flex items-center gap-4">
-            <span className="w-3 h-3 rounded-full bg-brand"></span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl md:text-5xl font-black text-white mb-14 flex items-center gap-4"
+          >
+            <span className="w-3 h-3 rounded-full bg-brand shadow-[0_0_12px_rgba(212,175,55,0.5)]"></span>
             Trajetória
-          </h2>
-          <div className="relative border-l border-brand-dark/30 ml-3 flex flex-col gap-12">
+          </motion.h2>
+          <div className="relative border-l border-brand-dark/30 ml-3 flex flex-col gap-14">
             {education.map((item, i) => (
-              <div key={i} className="pl-10 relative group">
-                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-zinc-900 border-2 border-brand group-hover:bg-brand transition-colors shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
-                <h4 className="text-2xl font-bold text-white mb-2">{item.title}</h4>
+              <motion.div
+                key={i}
+                custom={i}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
+                className="pl-10 relative group"
+              >
+                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-brand group-hover:bg-brand transition-colors duration-300 shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
+                <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-brand transition-colors duration-300">{item.title}</h4>
                 <div className="inline-block px-4 py-1 rounded-full bg-brand-dark/20 text-brand text-sm font-semibold mb-4 border border-brand-dark/50">
                   {item.date}
                 </div>
-                <p className="text-zinc-500 leading-relaxed">
+                <p className="text-zinc-600 leading-relaxed">
                   {item.desc}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Experience Column */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-12 flex items-center gap-4">
-            <span className="w-3 h-3 rounded-full bg-brand-dark"></span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl md:text-5xl font-black text-white mb-14 flex items-center gap-4"
+          >
+            <span className="w-3 h-3 rounded-full bg-brand-dark shadow-[0_0_12px_rgba(88,15,28,0.5)]"></span>
             Especialidades
-          </h2>
-          <div className="relative border-l border-brand/30 ml-3 flex flex-col gap-12">
+          </motion.h2>
+          <div className="relative border-l border-brand/30 ml-3 flex flex-col gap-14">
             {experience.map((item, i) => (
-              <div key={i} className="pl-10 relative group">
-                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-zinc-900 border-2 border-brand-dark group-hover:bg-brand-dark transition-colors shadow-[0_0_10px_rgba(88,15,28,0.5)]"></div>
-                <h4 className="text-2xl font-bold text-white mb-2">{item.title}</h4>
+              <motion.div
+                key={i}
+                custom={i}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
+                className="pl-10 relative group"
+              >
+                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-brand-dark group-hover:bg-brand-dark transition-colors duration-300 shadow-[0_0_10px_rgba(88,15,28,0.5)]"></div>
+                <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-brand-dark transition-colors duration-300">{item.title}</h4>
                 <div className="inline-block px-4 py-1 rounded-full bg-brand/10 text-brand text-sm font-semibold mb-4 border border-brand/30">
                   {item.date}
                 </div>
-                <p className="text-zinc-500 leading-relaxed">
+                <p className="text-zinc-600 leading-relaxed">
                   {item.desc}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

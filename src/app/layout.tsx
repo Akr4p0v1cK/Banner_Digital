@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import GlobalNoise from "@/components/GlobalNoise";
+import CustomCursor from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}>
-      <body className="font-sans bg-black text-white selection:bg-brand selection:text-black">
-        <Navbar />
-        {children}
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="font-sans bg-[#0a0a0a] text-[#ededed] selection:bg-brand selection:text-black">
+        <CustomCursor />
+        <GlobalNoise />
+        <SmoothScrollProvider>
+          <Navbar />
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import GlobalCanvasBackground from "@/components/GlobalCanvasBackground";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Stats from "@/components/Stats";
+import TechLogos from "@/components/TechLogos";
 import DesignSkills from "@/components/DesignSkills";
 import Features from "@/components/Features";
 import Resume from "@/components/Resume";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Services />
         <Stats />
+        <TechLogos />
         <DesignSkills />
         <Features />
         <Resume />

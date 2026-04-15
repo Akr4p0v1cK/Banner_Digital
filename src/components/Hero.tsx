@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { motion, useScroll, useMotionValueEvent, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -12,6 +12,19 @@ export default function Hero() {
 
   const contentOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 0.4], [0, -100]);
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.1 }
+    }
+  };
+
+  const titleVariant = {
+    hidden: { y: "120%", rotate: 2, opacity: 0 },
+    visible: { y: "0%", rotate: 0, opacity: 1, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } }
+  };
 
   return (
     <section ref={containerRef} className="relative w-full h-[150vh] bg-transparent">
@@ -27,59 +40,76 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-white font-bold tracking-[0.2em] uppercase text-[0.7rem] sm:text-sm mb-0 lg:mb-2 relative hidden lg:block"
+              className="text-zinc-400 font-bold tracking-[0.2em] uppercase text-[0.7rem] sm:text-sm mb-0 lg:mb-2 relative hidden lg:block"
             >
               Olá
               <span className="absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-0.5 bg-brand-dark"></span>
             </motion.h4>
             
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mt-2 lg:mt-0"
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              animate="visible"
+              className="flex flex-col gap-4 lg:gap-6 items-center lg:items-start w-full"
             >
-              Transformando<br />
-              <span className="text-brand-dark inline-block mt-1 lg:mt-2 relative">
-                visões em experiências de elite.
-              </span>
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-zinc-400 text-sm sm:text-base md:text-xl max-w-lg leading-relaxed mt-2 lg:mt-4 drop-shadow-md"
-            >
-              Especialista em unir design de alto impacto e tecnologia de ponta para posicionar sua marca no topo do mercado digital.
-            </motion.p>
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mt-2 lg:mt-0 text-center lg:text-left">
+                <div className="overflow-hidden">
+                  <motion.div variants={titleVariant} className="origin-bottom-left">
+                    Transformando
+                  </motion.div>
+                </div>
+                <div className="overflow-hidden mt-1 lg:mt-2">
+                  <motion.div variants={titleVariant} className="origin-bottom-left">
+                    <span className="text-brand-dark inline-block relative">
+                      visões em experiências
+                    </span>
+                  </motion.div>
+                </div>
+                <div className="overflow-hidden">
+                  <motion.div variants={titleVariant} className="origin-bottom-left">
+                    <span className="text-brand-dark inline-block relative">
+                      de elite.
+                    </span>
+                  </motion.div>
+                </div>
+              </h1>
+              
+              <motion.p 
+                variants={titleVariant}
+                className="text-zinc-500 text-sm sm:text-base md:text-lg max-w-lg leading-relaxed drop-shadow-md text-center lg:text-left"
+              >
+                Especialista em unir design de alto impacto e tecnologia de ponta para posicionar sua marca no topo do mercado digital.
+              </motion.p>
 
-            <motion.button 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-4 lg:mt-6 px-6 lg:px-8 py-3 lg:py-4 bg-brand-dark hover:bg-brand text-white hover:text-black font-semibold rounded-full flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(88,15,28,0.4)] text-sm lg:text-base"
-            >
-              Ver Portfólio <span>→</span>
-            </motion.button>
+              <motion.button 
+                variants={titleVariant}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                data-cursor-hover="true"
+                className="mt-2 lg:mt-4 px-6 lg:px-8 py-3 lg:py-4 bg-brand-dark hover:bg-brand text-white hover:text-black font-semibold rounded-full flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(88,15,28,0.4)] text-sm lg:text-base cursor-none"
+              >
+                Ver Portfólio <span>→</span>
+              </motion.button>
+            </motion.div>
+
           </div>
 
           {/* Right Content */}
           <div className="w-full lg:w-1/2 relative h-[350px] sm:h-[450px] lg:h-[800px] flex justify-center items-end mt-4 lg:mt-0">
             
+            {/* Background "FULLSTACK" text with blur */}
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 0.9, x: 0 }}
               transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
               className="absolute top-[20%] lg:top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] text-center z-0"
             >
-              <h2 className="text-[3.5rem] sm:text-[5rem] md:text-[6rem] lg:text-[10rem] font-black text-white leading-none whitespace-nowrap opacity-90 drop-shadow-2xl">
+              <h2 className="text-[3.5rem] sm:text-[5rem] md:text-[6rem] lg:text-[10rem] font-black text-white leading-none whitespace-nowrap opacity-80 drop-shadow-2xl backdrop-blur-[1px]">
                 FULLSTACK
               </h2>
             </motion.div>
 
+            {/* Profile Image */}
             <motion.div 
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
@@ -91,10 +121,15 @@ export default function Hero() {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="w-full lg:w-[85%] h-full lg:h-[85%] relative overflow-visible flex items-end justify-center"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent z-10 lg:from-black lg:via-black/50"></div>
+                {/* Glow effect behind portrait */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-transparent blur-3xl scale-110 z-0 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent z-10 lg:from-[#0a0a0a] lg:via-[#0a0a0a]/50"></div>
                 
-                {/* Touch Group Container to enable active states on mobile */}
-                <div className="group w-full h-[90%] lg:h-full relative overflow-hidden rounded-t-[60px] lg:rounded-t-[100px] border-b border-brand-dark/30 backdrop-blur-[2px] pointer-events-auto cursor-pointer">
+                {/* Touch Group Container */}
+                <div 
+                  data-cursor-hover="true"
+                  className="group w-full h-[90%] lg:h-full relative overflow-hidden rounded-t-[60px] lg:rounded-t-[100px] border-b border-brand-dark/30 backdrop-blur-[2px] pointer-events-auto cursor-none"
+                >
                   <Image 
                     src="/images/hero_perfil.png" 
                     alt="Banner Digital Portrait" 
@@ -106,6 +141,7 @@ export default function Hero() {
               </motion.div>
             </motion.div>
 
+            {/* Foreground "FULLSTACK" outline text with blur */}
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -113,8 +149,8 @@ export default function Hero() {
               className="absolute bottom-5 lg:bottom-10 left-1/2 -translate-x-1/2 w-[150%] text-center z-20 pointer-events-none"
             >
               <h2 
-                className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[7rem] font-black leading-none whitespace-nowrap text-transparent drop-shadow-lg"
-                style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}
+                className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[7rem] font-black leading-none whitespace-nowrap text-transparent drop-shadow-lg backdrop-blur-[0.5px]"
+                style={{ WebkitTextStroke: '1px rgba(255,255,255,0.5)' }}
               >
                 FULLSTACK
               </h2>
