@@ -13,12 +13,12 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 w-full z-50 py-3 sm:py-4 md:py-6 px-4 sm:px-6 md:px-12 flex items-center justify-between bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <div className="relative w-[120px] sm:w-[160px] md:w-[260px] h-[45px] sm:h-[60px] md:h-[95px]">
+          <div className="relative w-[40px] sm:w-[50px] md:w-[65px] h-[40px] sm:h-[50px] md:h-[65px]">
             <Image 
-              src="/images/logo.png" 
-              alt="Aethel Logo" 
+              src="/images/logo_new.png" 
+              alt="Aethel Technology Solutions" 
               fill 
-              className="object-contain sm:scale-[1.3] origin-left" 
+              className="object-contain rounded-lg" 
               priority
             />
           </div>
